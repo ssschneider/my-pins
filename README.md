@@ -19,7 +19,7 @@ Criamos o My Pins, uma aplicação que permite que você salve o pin em pastas q
 
 ## 🔗 Acesso 
 
-Para acessar o My Pins, basta <a href="#" target="_blank">clicar aqui</a>!
+Para acessar o My Pins, basta <a href="https://my-pins.vercel.app/" target="_blank">clicar aqui</a>!
 
 ##  📱 Demo
 
