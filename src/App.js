@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
+import MinhasPastas from "./pages/minhas-pastas/minhas-pastas";
+import Header from "./partials/HeaderPartial/header";
+import { AppContext } from "./store/AppContext";
+
+const initialState = {
+  activePinId: null,
+  mode: null,
+  folders: [],
+  type: null,
+  pins: []
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AppContext initialState={initialState}>
+      <Header />
+      <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/minhas-pastas" element={<MinhasPastas />}/>
+      </Routes>
+      </AppContext>
+    </BrowserRouter>
   );
 }
 
